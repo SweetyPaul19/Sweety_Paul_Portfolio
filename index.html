@@ -1,0 +1,884 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sweety paul - Portfolio</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+
+    <style>
+    body{
+        background-color: rgb(0, 0, 33);
+        color: white;
+        font-family: 'Poppins',sans-serif;
+    }
+    nav{
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 80px;
+        background-color: rgb(18,18, 62);
+    }
+    nav ul{
+        display: flex;
+        justify-content: center;
+    }
+    nav ul li{
+        list-style: none;
+        margin: 0 23px;
+    }
+    nav ul li a{
+        text-decoration: none;
+        color: white;
+    }
+    nav ul li a:hover{
+    
+        color: rgb(153, 153, 244);
+        font-size: 1.05rem;
+    }
+    .left{
+        font-size: 1.5rem;
+
+    }
+    .firstSection{
+        display: flex;
+        justify-content: space-around;
+        margin: 130px 0;
+        align-items: center;
+
+    }
+    .firstSection > div{
+        width: 30%;
+
+    }
+    .leftSection{
+        
+        font-size: 3rem;
+    
+
+    }
+    .rightSection img{
+        width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(163, 79, 243, 0.4);   
+    }
+    .leftSection div{ 
+        font-size: 3rem;
+    }
+    .purple{
+        color: rgb(163, 79, 243);
+
+    }
+    *{
+        margin: 0;
+        padding: 0;
+    }
+    #element{
+        color: rgb(157, 86, 250);
+    }
+    .secondsection{
+        max-width: 80%;
+        margin:auto;
+    }
+    main hr{
+        border: 0;
+        background-color: #9c97f1;
+        height: 1.2px;
+        margin: 60px 84px;
+    }
+    .aboutSection {
+    max-width: 80%;
+    margin: auto;
+    padding: 80px 0;
+}
+
+.aboutContainer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 60px;
+}
+
+.aboutImage img {
+    width: 80%;
+    border-radius: 15px;
+    box-shadow: 0 0 25px rgba(163, 79, 243, 0.4);
+}
+
+.aboutContent h1 {
+    font-size: 3rem;
+    margin-bottom: 20px;
+    color: white;
+}
+
+.aboutText {
+    font-size: 1.1rem;
+    color: #ffffff;
+    line-height: 1.8;
+    margin-bottom: 30px;
+}
+
+.aboutDetails p {
+    font-size: 1rem;
+    margin-bottom: 12px;
+    color: #ffffff;
+}
+
+.aboutDetails span {
+    color: rgb(163, 79, 243);
+    font-weight: 600;
+}
+.aboutDetails a {
+    color: rgb(77, 77, 178);
+    text-decoration: none;
+}
+
+.aboutDetails a:hover {
+    text-decoration: underline;
+}
+.aboutDetails p {
+    font-size: 1rem;
+    margin-bottom: 18px;  /* 👈 space between each line */
+    line-height: 1.9;    /* 👈 vertical spacing */
+    color: #ffffff;
+}
+.skillsSection {
+    max-width: 85%;
+    margin: auto;
+    padding: 100px 0;
+    text-align: center;
+}
+
+.sectionTitle {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.sectionSubtitle {
+    color: #bdbdbd;
+    font-size: 1.1rem;
+    margin-bottom: 60px;
+}
+
+.skillsGrid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 45px;
+}
+
+.skillBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    transition: transform 0.3s ease;
+}
+
+.skillBox i {
+    font-size: 3.5rem;
+}
+
+.skillBox span {
+    font-size: 1rem;
+    color: #ffffff;
+}
+
+.skillBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+    transition: 0.3s ease;
+}
+
+.skillBox:hover {
+    transform: translateY(-8px);
+    filter: drop-shadow(0 0 10px rgba(163,79,243,0.6));
+}
+.projectsSection {
+  max-width: 90%;
+  margin: auto;
+  padding: 120px 0;
+  text-align: center;
+}
+
+.projectsTitle {
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+
+.projectsSubtitle {
+  font-size: 1.1rem;
+  color: #bdbdbd;
+  margin-bottom: 70px;
+}
+
+.projectsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 50px;
+}
+
+.projectCard {
+  background: #ffffff;
+  color: #000;
+  border-radius: 12px;
+  padding: 25px;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.projectCard img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 20px;
+}
+
+.projectCard h3 {
+  font-size: 1.3rem;
+  margin-bottom: 10px;
+}
+
+.projectCard p {
+  font-size: 0.95rem;
+  color: #555;
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+.tech {
+  display: block;
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 18px;
+}
+
+.projectBtn {
+  display: inline-block;
+  padding: 8px 18px;
+  border: 1.5px solid rgb(163, 79, 243);
+  border-radius: 20px;
+  color: rgb(163, 79, 243);
+  font-size: 0.85rem;
+  text-decoration: none;
+  transition: 0.3s;
+}
+
+.projectBtn:hover {
+  background: rgb(163, 79, 243);
+  color: #fff;
+}
+
+.projectCard:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 20px 40px rgba(163, 79, 243, 0.25);
+}
+.projectLinks {
+  display: flex;
+  gap: 14px;
+  margin-top: 16px;
+}
+
+/* Common Button Style */
+.githubBtn,
+.liveBtn {
+  padding: 10px 18px;
+  border-radius: 25px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  display: inline-block;
+}
+
+/* GitHub Button */
+.githubBtn {
+  background: rgb(210, 173, 244);
+  color: #000;
+}
+
+.githubBtn:hover {
+  background: rgb(210, 173, 244);
+  transform: translateY(-2px);
+}
+
+/* Live Demo Button */
+.liveBtn {
+  border: 2px solid rgb(163, 79, 243);
+  color: rgb(163, 79, 243);
+}
+
+.liveBtn:hover {
+  background: rgb(163, 79, 243);
+  color: #fff;
+  transform: translateY(-2px);
+}
+.resumeSection {
+  min-height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background: rgb(0, 0, 33); /* SAME AS SITE */
+  padding: 120px 20px;
+}
+
+.resumeTitle {
+  font-size: 3rem;
+  margin-bottom: 15px;
+  color: #ffffff;
+}
+
+.resumeSubtitle {
+  font-size: 1.1rem;
+  color: #bdbdbd;
+  margin-bottom: 50px;
+  max-width: 600px;
+}
+
+.resumeButtons {
+  display: flex;
+  gap: 25px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.resumeBtn {
+  padding: 16px 38px;
+  border-radius: 40px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-decoration: none;
+  letter-spacing: 1px;
+  transition: all 0.3s ease;
+}
+
+/* VIEW CV */
+.viewBtn {
+  background: rgb(163, 79, 243); /* PURPLE */
+  color: #fff;
+}
+
+.viewBtn:hover {
+  background: rgb(143, 59, 223);
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(163,79,243,0.6);
+}
+
+/* DOWNLOAD CV */
+.downloadBtn {
+  border: 2px solid rgb(163, 79, 243);
+  color: rgb(163, 79, 243);
+}
+
+.downloadBtn:hover {
+  background: rgb(163, 79, 243);
+  color: #fff;
+  transform: translateY(-3px);
+  box-shadow: 0 0 25px rgba(163,79,243,0.6);
+}
+.contact {
+  padding: 120px 10%;
+  background: rgb(0, 0, 33);   /* SAME AS BODY */
+  color: #ffffff;
+  text-align: center;
+}
+
+
+.contact h2 {
+  font-size: 3.2rem;
+  margin-bottom: 12px;
+}
+
+.contact-subtitle {
+  color: #cbd5f5;
+  margin-bottom: 70px;
+  font-size: 1.05rem;
+}
+
+.contact-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 35px;
+}
+
+.contact-card {
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(10px);
+  padding: 40px 25px;
+  border-radius: 18px;
+  transition: all 0.35s ease;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.contact-card:hover {
+  transform: translateY(-10px);
+  border-color: #a855f7;
+  box-shadow: 0 15px 40px rgba(168, 85, 247, 0.35);
+}
+
+.icon {
+  font-size: 36px;
+  margin-bottom: 20px;
+  display: inline-block;
+}
+
+.contact-card h3 {
+  margin-bottom: 10px;
+  font-size: 1.15rem;
+}
+
+.contact-card p {
+  color: #e5e7eb;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 70px;
+  background: linear-gradient(90deg, #020617, #0f172a);
+  z-index: 1000;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 0 60px;   /* 🔥 controls left-right spacing */
+}
+.navbar .right ul {
+  display: flex;
+  gap: 5px;          /* space between menu items */
+  margin-right: 120px; /* 🔥 pulls menu left */
+}
+nav ul li a {
+  position: relative;
+  text-decoration: none;
+}
+
+nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background-color: rgb(153, 153, 244);
+  transition: all 0.3s ease;
+}
+
+nav ul li a:hover::after {
+  width: 100%;
+  left: 0;
+}
+
+
+section {
+  padding-top: 100px;
+}
+html {
+  scroll-behavior: smooth;
+}
+.education-section {
+  padding: 80px 10%;
+  color: white;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 50px;
+}
+
+.education-card {
+  background: rgba(255, 255, 255, 0.05);
+  border-left: 4px solid #818cf8;
+  padding: 25px 30px;
+  margin-bottom: 30px;
+  border-radius: 12px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.education-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 10px 30px rgba(129, 140, 248, 0.3);
+}
+
+.education-card h2 {
+  font-size: 1.5rem;
+  color: #a5b4fc;
+}
+
+.education-card h3 {
+  font-size: 1.1rem;
+  margin: 6px 0;
+  color: #e5e7eb;
+}
+
+.education-card .year {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  margin-bottom: 10px;
+}
+
+.education-card .desc {
+  font-size: 1rem;
+  color: #d1d5db;
+}
+</style>
+</head>
+<body>
+<header>
+  <nav class="navbar">
+    <div class="left"><b>SWEETY</b></div>
+    <div class="right">
+      <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#Resume">Resume</a></li>
+        <li><a href="#contact">Contact Me</a></li>
+      </ul>
+    </div>
+  </nav>
+</header>
+    <main>
+        <section class="firstSection" id="home">
+            <div class="leftSection">
+            <div>Hello,</div>
+            My name is  <span class="purple">Sweety</span>
+            <div>I am a Passionate</div>
+            <span id="element"></span>
+            </div>
+            
+            <div class="rightSection">
+                <img src="photo.jpeg" alt="">
+            </div>
+
+        </section>
+        <hr>
+        <section class="aboutSection" id="about">
+  <div class="aboutContainer">
+
+    <!-- Left Image -->
+    <div class="aboutImage">
+      <img src="photo.jpeg" alt="Sweety Paul">
+    </div>
+
+    <!-- Right Content -->
+    <div class="aboutContent">
+      <h1>About Me</h1>
+
+      <p class="aboutText">
+        I am a passionate and motivated Computer Science student with a strong
+        interest in Full-Stack Web Development,Artificial Intelligence and Machine learning .
+        I enjoy building responsive web applications and exploring modern
+        technologies to solve real-world problems.
+      </p>
+      <div class="aboutDetails">
+        <p><span>Name:</span> Sweety Paul</p>
+        <p><span>Email:</span> sweetypaul2005@email.com</p>
+        <p><span>Skills:</span> HTML5, CSS, JavaScript, C, Java, Python, React js,Node js,Mysql,Mongodb,Bootstrap,Git & Github</p>
+        <p><span>LinkedIn:</span>
+  <a href="https://www.linkedin.com/in/sweety-paul-a8765a393" target="_blank">
+    linkedin.com/in/sweety-paul
+  </a>
+</p>
+
+<p><span>GitHub:</span>
+  <a href="https://github.com/SweetyPaul19" target="_blank">
+    github.com/SweetyPaul19
+  </a>
+</p>
+
+<p><span>LeetCode:</span>
+  <a href="https://leetcode.com/u/Sweety_Paul" target="_blank">
+    leetcode.com/u/Sweety_Paul
+  </a>
+</p>
+
+<p><span>HackerRank:</span>
+  <a href="https://www.hackerrank.com/profile/sweetypaul2005" target="_blank">
+    hackerrank.com/profile/sweetypaul2005
+  </a>
+</p>
+
+      </div>
+    </div>
+
+  </div>
+</section>
+<hr>
+<section id="education" class="education-section">
+  <h1 class="section-title">Education</h1>
+
+  <!-- B.Tech -->
+  <div class="education-card">
+    <h2>Bachelor of Technology (B.Tech) in Computer Science & Engineering</h2>
+    <h3>Dr. B.C Roy Engineering College, MAKAUT University</h3>
+    <p class="year">2023 – 2027</p>
+    <p class="desc">
+      Pursuing B.Tech with focus on programming, data structures, algorithms, web development, 
+      and emerging technologies.
+    </p>
+  </div>
+
+  <!-- 12th -->
+  <div class="education-card">
+    <h2>Higher Secondary (12th) – WBBCHSE</h2>
+    <h3>Science Stream</h3>
+    <p class="year">2021 – 2023</p>
+    <p class="desc">
+      Studied Physics, Chemistry, Mathematics, and Biology, with emphasis on analytical thinking 
+      and problem-solving skills.
+    </p>
+  </div>
+
+  <!-- 10th -->
+  <div class="education-card">
+    <h2>Secondary (10th) – WBBSE</h2>
+    <p class="year">2021</p>
+    <p class="desc">
+      Completed secondary education with a strong academic foundation in Mathematics and Science.
+    </p>
+  </div>
+</section>
+
+<hr>
+<section class="skillsSection" id="skills">
+  <h1 class="sectionTitle">My Skills</h1>
+<p class="sectionSubtitle">
+  Technical skills and tools I’ve mastered
+</p>
+
+<div class="skillsGrid">
+
+  <!-- Programming Languages -->
+  <div class="skillBox">
+    <i class="devicon-c-plain colored"></i>
+    <span>C</span>
+  </div>
+
+  <div class="skillBox">
+    <i class="devicon-cplusplus-plain colored"></i>
+    <span>C++</span>
+  </div>
+
+  <div class="skillBox">
+    <i class="devicon-python-plain colored"></i>
+    <span>Python</span>
+  </div>
+
+  <div class="skillBox">
+    <i class="devicon-java-plain colored"></i>
+    <span>Java</span>
+  </div>
+
+  <div class="skillBox">
+    <i class="devicon-php-plain colored"></i>
+    <span>PHP</span>
+  </div>
+
+  <!-- Frontend -->
+  <div class="skillBox">
+    <i class="devicon-html5-plain colored"></i>
+    <span>HTML</span>
+  </div>
+
+  <div class="skillBox">
+    <i class="devicon-css3-plain colored"></i>
+    <span>CSS</span>
+  </div>
+
+  <div class="skillBox">
+    <i class="devicon-javascript-plain colored"></i>
+    <span>JavaScript</span>
+  </div>
+
+  <div class="skillBox">
+    <i class="devicon-bootstrap-plain colored"></i>
+    <span>Bootstrap</span>
+  </div>
+
+  <div class="skillBox">
+    <i class="devicon-react-original colored"></i>
+    <span>React</span>
+  </div>
+
+  <!-- Backend -->
+  <div class="skillBox">
+    <i class="devicon-nodejs-plain colored"></i>
+    <span>Node.js</span>
+  </div>
+
+  <div class="skillBox">
+    <i class="devicon-express-original"></i>
+    <span>Express.js</span>
+  </div>
+
+  <div class="skillBox">
+    <i class="devicon-django-plain colored"></i>
+    <span>Django</span>
+  </div>
+
+  <div class="skillBox">
+    <i class="devicon-java-plain colored"></i>
+    <span>Servlet</span>
+  </div>
+
+  <!-- Databases -->
+  <div class="skillBox">
+    <i class="devicon-mysql-plain colored"></i>
+    <span>MySQL</span>
+  </div>
+
+  <div class="skillBox">
+    <i class="devicon-mongodb-plain colored"></i>
+    <span>MongoDB</span>
+  </div>
+  <!-- Tools -->
+  <div class="skillBox">
+    <i class="devicon-git-plain colored"></i>
+    <span>Git</span>
+  </div>
+  <div class="skillBox">
+    <i class="devicon-github-original colored"></i>
+    <span>GitHub</span>
+  </div>
+  <div class="skillBox">
+    <i class="devicon-vscode-plain colored"></i>
+    <span>VS Code</span>
+  </div>
+</div>
+</section>
+<hr>
+<section class="projectsSection" id="projects">
+  <h1 class="projectsTitle">My Projects</h1>
+  <p class="projectsSubtitle">
+    Selected projects demonstrating my technical capabilities
+  </p>
+  <div class="projectsGrid">
+    <!-- Project 1 -->
+    <div class="projectCard">
+      <img src="image.png" alt="Employee Payroll System">
+      <h3>Employee Payroll System</h3>
+      <p>
+        A Java Servlet-based web application to manage employee details,
+        salary calculation, deductions, and payroll generation efficiently.
+      </p>
+      <span class="tech">Java • Servlet • JDBC • MySQL</span>
+      <div class="projectLinks">
+      <a href="https://github.com/SweetyPaul19/Employee_Payroll_System"
+     target="_blank"
+     class="githubBtn">VIEW ON GITHUB</a>
+</div>
+    </div>
+    <!-- Project 2 -->
+    <div class="projectCard">
+      <img src="course.png" alt="Student Course Allotment System">
+      <h3>Student Course Allotment Management System</h3>
+      <p>
+        Full-stack web system that handles student registration,
+        course allocation, and admin-based course management.
+      </p>
+      <span class="tech">HTML • CSS • JavaScript • Node.js • MongoDB</span>
+     <div class="projectLinks">
+    <div class="projectLinks">
+  <a href="https://github.com/SweetyPaul19/CourseMatrix"
+     target="_blank"
+     class="githubBtn">VIEW ON GITHUB</a>
+  <a href="https://course-matrix-taupe.vercel.app/"
+     target="_blank"
+     class="liveBtn">LIVE DEMO</a>
+</div>
+</div>
+    </div>
+    <!-- Project 3 -->
+    <div class="projectCard">
+      <img src="lawlink.png" alt="LawLink Project">
+      <h3>LawLink</h3>
+      <p>
+        A Legal & Justice Tech platform that connects users with advocates
+        based on case type and location, improving access to legal services.
+      </p>
+      <span class="tech">React • Node.js • Express • MongoDB</span>
+      <div class="projectLinks">
+  <a href="https://github.com/SweetyPaul19/LAW__Link"
+     target="_blank"
+     class="githubBtn">VIEW ON GITHUB</a>
+
+  <a href="https://legal-genie-phi.vercel.app/"
+     target="_blank"
+     class="liveBtn">LIVE DEMO</a>
+</div>
+
+    </div>
+
+  </div>
+</section>
+
+<hr>
+<section class="resumeSection" id="Resume">
+  <h1 class="resumeTitle">My Resume</h1>
+  <p class="resumeSubtitle">
+    A quick overview of my skills, projects, and experience
+  </p>
+
+  <div class="resumeButtons">
+    <a href="resume.pdf" target="_blank" class="resumeBtn viewBtn">
+      VIEW CV
+    </a>
+
+    <!-- <a href="resume.pdf" download class="resumeBtn downloadBtn">
+      DOWNLOAD CV
+    </a> -->
+  </div>
+</section>
+<hr>
+
+<section class="contact" id="contact">
+  <h2>Contact Me</h2>
+  <p class="contact-subtitle">
+    Let’s connect and build something meaningful
+  </p>
+
+  <div class="contact-grid">
+
+    <div class="contact-card">
+      <span class="icon">📍</span>
+      <h3>Location</h3>
+      <p>Durgapur, West Bengal<br>India</p>
+    </div>
+    <!-- <div class="contact-card">
+      <span class="icon">📞</span>
+      <h3>Phone</h3>
+      <p>+91 9734743058</p>
+    </div> -->
+    <div class="contact-card">
+      <span class="icon">✉️</span>
+      <h3>Email</h3>
+      <p>sweetypaul2005@gmail.com</p>
+    </div>
+    <div class="contact-card">
+      <span class="icon">💼</span>
+      <h3>LinkedIn</h3>
+      <p>https://www.linkedin.com/in/sweety-paul</p>
+    </div>
+  </div>
+</section>
+    </main>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+    var typed = new Typed('#element', {
+      strings: ['Full-Stack developer', 'web designer','AI Engineer...'],
+      typeSpeed: 50,
+    });
+  </script>
+</body>
+</html>
