@@ -529,6 +529,269 @@ html {
   font-size: 1rem;
   color: #d1d5db;
 }
+
+/* ===== Training Section (Modern Glass UI Style) ===== */
+
+.training-section {
+  padding: 100px 10%;
+  color: white;
+  background: radial-gradient(circle at top, #020617, #000021);
+}
+
+.training-title {
+  text-align: center;
+  font-size: 3rem;
+  margin-bottom: 70px;
+  background: linear-gradient(90deg, #a855f7, #6366f1);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.training-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 35px;
+}
+
+.training-card {
+  position: relative;
+  background: rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-radius: 18px;
+  padding: 30px 30px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 0 0 rgba(0,0,0,0),
+    inset 0 0 20px rgba(255,255,255,0.02);
+  transition: all 0.4s ease;
+  overflow: hidden;
+}
+
+/* Glow border effect */
+.training-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  padding: 1.5px;
+  background: linear-gradient(135deg, #a855f7, #6366f1, #22d3ee);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.5;
+}
+
+.training-card:hover {
+  transform: translateY(-10px) scale(1.01);
+  box-shadow: 0 25px 60px rgba(168, 85, 247, 0.35);
+}
+
+/* Content */
+.training-card h3 {
+  font-size: 1.35rem;
+  margin-bottom: 10px;
+  color: #e9d5ff;
+}
+
+.training-card .org {
+  font-size: 1rem;
+  color: #c7d2fe;
+  margin-bottom: 6px;
+}
+
+.training-card .year {
+  font-size: 0.85rem;
+  color: #94a3b8;
+  margin-bottom: 14px;
+  letter-spacing: 0.5px;
+}
+
+.training-card p {
+  font-size: 0.95rem;
+  color: #e5e7eb;
+  line-height: 1.7;
+}
+
+/* Floating glow icon circle */
+.training-card::after {
+  content: "🎓";
+  position: absolute;
+  top: -18px;
+  right: -18px;
+  background: linear-gradient(135deg, #a855f7, #6366f1);
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 22px;
+  box-shadow: 0 0 25px rgba(168, 85, 247, 0.6);
+}
+.cert-btn {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 9px 22px;
+  border-radius: 22px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: rgb(163, 79, 243);
+  border: 2px solid rgb(163, 79, 243);
+  transition: all 0.3s ease;
+}
+
+.cert-btn:hover {
+  background: rgb(163, 79, 243);
+  color: white;
+  box-shadow: 0 0 20px rgba(163, 79, 243, 0.6);
+  transform: translateY(-2px);
+}
+
+
+.achievements-section {
+  padding: 80px 10%;
+  color: white;
+}
+
+.achievements-title {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.achievement-card {
+  background: rgba(255, 255, 255, 0.06);
+  border-left: 4px solid rgb(163, 79, 243);
+  padding: 25px 28px;
+  border-radius: 14px;
+  transition: all 0.3s ease;
+}
+
+.achievement-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 35px rgba(163, 79, 243, 0.35);
+}
+
+.achievement-card h3 {
+  font-size: 1.25rem;
+  color: #c4b5fd;
+  margin-bottom: 8px;
+}
+
+.achievement-card .year {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  margin-bottom: 10px;
+}
+
+.achievement-card p {
+  font-size: 0.95rem;
+  color: #d1d5db;
+  line-height: 1.6;
+}
+.training-card::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 18px;
+  padding: 1.5px;
+  background: linear-gradient(135deg, #a855f7, #6366f1, #22d3ee);
+  -webkit-mask:
+    linear-gradient(#fff 0 0) content-box,
+    linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  opacity: 0.5;
+
+  pointer-events: none; /* ✅ THIS FIXES BUTTON CLICK ISSUE */
+}
+.cert-btn {
+  position: relative;
+  z-index: 10;
+}
+.achievements-section {
+  padding: 80px 10%;
+  color: white;
+}
+
+.achievements-title {
+  text-align: center;
+  font-size: 2.8rem;
+  margin-bottom: 50px;
+  background: linear-gradient(90deg, #a34ff3, #22c55e);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.achievements-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+}
+
+.achievement-card {
+  background: rgba(255, 255, 255, 0.07);
+  border: 1px solid rgba(163, 79, 243, 0.4);
+  padding: 25px 28px;
+  border-radius: 16px;
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.achievement-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 15px 40px rgba(163, 79, 243, 0.4);
+}
+
+.achievement-card h3 {
+  font-size: 1.25rem;
+  color: #ddd6fe;
+  margin-bottom: 8px;
+}
+
+.achievement-card .year {
+  font-size: 0.9rem;
+  color: #9ca3af;
+  margin-bottom: 10px;
+}
+
+.achievement-card p {
+  font-size: 0.95rem;
+  color: #d1d5db;
+  line-height: 1.6;
+  margin-bottom: 15px;
+}
+
+/* Button Style */
+.ach-btn {
+  display: inline-block;
+  padding: 8px 20px;
+  border-radius: 20px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-decoration: none;
+  color: rgb(163, 79, 243);
+  border: 2px solid rgb(163, 79, 243);
+  transition: 0.3s ease;
+}
+
+.ach-btn:hover {
+  background: rgb(163, 79, 243);
+  color: white;
+}
+
+
 </style>
 </head>
 <body>
@@ -541,7 +804,9 @@ html {
         <li><a href="#about">About</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#skills">Skills</a></li>
+        <li><a href="#training">Training & Certifications</a></li>
         <li><a href="#projects">Projects</a></li>
+        <li><a href="#achievements">Achievements</a></li>
         <li><a href="#Resume">Resume</a></li>
         <li><a href="#contact">Contact Me</a></li>
       </ul>
@@ -583,7 +848,7 @@ html {
       </p>
       <div class="aboutDetails">
         <p><span>Name:</span> Sweety Paul</p>
-        <p><span>Email:</span> sweetypaul2005@gmail.com</p>
+        <p><span>Email:</span> sweetypaul2005@email.com</p>
         <p><span>Skills:</span> HTML5, CSS, JavaScript, C, Java, Python, React js,Node js,Mysql,Mongodb,Bootstrap,Git & Github</p>
         <p><span>Linktree:</span>
   <a href="https://linktr.ee/sweety_paul" target="_blank">
@@ -763,6 +1028,90 @@ html {
 </div>
 </section>
 <hr>
+
+<section id="training" class="training-section">
+  <h1 class="training-title">Training & Certifications</h1>
+
+  <div class="training-grid">
+
+    <!-- Training 1 -->
+    <div class="training-card">
+      <h3>Full Stack Web Development Training</h3>
+      <div class="org">Platform: Apna College</div>
+      <div class="year">2026</div>
+      <p>
+        Learned front-end and back-end technologies including HTML, CSS, JavaScript, 
+        Node.js, MongoDB, and React through hands-on projects.
+      </p>
+      <a href="YOUR_LINK_HERE" target="_blank" class="cert-btn">View Certificate</a>
+    </div>
+
+    <!-- Certification 2 -->
+    <div class="training-card">
+      <h3>Python Programming Certification</h3>
+      <div class="org">Platform: Infosys Springboard</div>
+      <div class="year">2025</div>
+      <p>
+        Gained strong understanding of Python fundamentals, data structures, 
+        and problem-solving techniques.
+      </p>
+      <a href="https://drive.google.com/file/d/1IuPOw0odxYqLJLmRkHLg8SBBGeJI9E8V/view?usp=drivesdk" target="_blank" class="cert-btn">View Certificate</a>
+      <a href="https://drive.google.com/file/d/1PJsJbo1HW3KYX_OzHB6rX0IXn6RtTTdw/view?usp=drivesdk" target="_blank" class="cert-btn">View Certificate</a>
+      <a href="https://drive.google.com/file/d/19-ryiRD6KmxSoInhVRnfs7Tjn1RN9naq/view?usp=drivesdk" target="_blank" class="cert-btn">View Certificate</a>
+    </div>
+
+    <!-- Certification 3 -->
+    <div class="training-card">
+      <h3>Java & Data Structures Certification</h3>
+      <div class="org">Platform: Apna College</div>
+      <div class="year">2024</div>
+      <p>
+        Learned core Java concepts, OOP principles, and data structures with 
+        practical coding exercises.
+      </p>
+      <a href="https://drive.google.com/file/d/1mdoPkqmly4zk71yzi_sbyNOooWig2Zbg/view?usp=drivesdk" target="_blank" class="cert-btn">View Certificate</a>
+    </div>
+
+    <!-- Certification 4 -->
+    <div class="training-card">
+      <h3>Diploma in Digital Technique Applications</h3>
+      <div class="org">Youth Computer Training Center, Durgapur</div>
+      <div class="year">2024</div>
+      <p>
+        Completed diploma training in digital techniques, computer applications, 
+        and practical IT skills with hands-on learning.
+      </p>
+      <a href="YOUR_LINK_HERE" target="_blank" class="cert-btn">View Certificate</a>
+    </div>
+
+    <!-- Certification 5 (Deloitte) -->
+    <div class="training-card">
+      <h3>Deloitte Technology Job Simulation</h3>
+      <div class="org">Platform: Forage</div>
+      <div class="year">2025</div>
+      <p>
+        Completed Deloitte virtual job simulation, gaining practical experience 
+        in technology solutions, problem-solving, and real-world industry tasks.
+      </p>
+      <a href="https://drive.google.com/file/d/1kR1I7OTkCR226bKl340L4jqK6h-ubzrJ/view?usp=drivesdk" target="_blank" class="cert-btn">View Certificate</a>
+    </div>
+
+    <!-- Certification 6 (Hackathon) -->
+    <div class="training-card">
+      <h3>Hackathon Participation & Achievement Certificate</h3>
+      <div class="org">Hactopus / HackZenith Hackathon</div>
+      <div class="year">2024</div>
+      <p>
+        Participated and secured top positions in national hackathons, demonstrating 
+        teamwork, innovation, and technical skills.
+      </p>
+      <a href="https://drive.google.com/file/d/1LKn3Sa12VY3YBCy1FYpZbM4rUYjeif-I/view?usp=drivesdk" target="_blank" class="cert-btn">View Certificate</a>
+    </div>
+
+  </div>
+</section>
+<hr>
+
 <section class="projectsSection" id="projects">
   <h1 class="projectsTitle">My Projects</h1>
   <p class="projectsSubtitle">
@@ -823,6 +1172,46 @@ html {
      class="liveBtn">LIVE DEMO</a>
 </div>
 
+    </div>
+
+  </div>
+</section>
+
+<hr>
+
+<section id="achievements" class="achievements-section">
+  <h1 class="achievements-title">Achievements</h1>
+
+  <div class="achievements-grid">
+
+    <!-- Achievement 1 -->
+    <div class="achievement-card">
+      <h3>Runner-Up in Hactopus Hackathon 🥈</h3>
+      <div class="year">Hactopus Hackathon | 2024</div>
+      <p>
+        Secured the Runner-Up position in the Hactopus Hackathon by developing an innovative technical solution.
+      </p>
+      <a href="https://drive.google.com/file/d/1LKn3Sa12VY3YBCy1FYpZbM4rUYjeif-I/view?usp=drivesdk" target="_blank" class="ach-btn">View Certificate</a>
+    </div>
+
+    <!-- Achievement 2 -->
+    <div class="achievement-card">
+      <h3>Runner-Up in HackZenith Hackathon 🏆</h3>
+      <div class="year">HackZenith Hackathon | 2024</div>
+      <p>
+        Achieved 2nd place in the HackZenith Hackathon by showcasing problem-solving and teamwork skills.
+      </p>
+      <a href="YOUR_LINK_HERE" target="_blank" class="ach-btn">View Certificate</a>
+    </div>
+
+    <!-- Achievement 3 -->
+    <div class="achievement-card">
+      <h3>3-Star Rating in C & Python ⭐⭐⭐</h3>
+      <div class="year">HackerRank</div>
+      <p>
+        Earned 3-star ratings in C and Python on HackerRank, demonstrating strong programming and algorithmic skills.
+      </p>
+      <a href="https://www.hackerrank.com/profile/sweetypaul2005" target="_blank" class="ach-btn">View Profile</a>
     </div>
 
   </div>
