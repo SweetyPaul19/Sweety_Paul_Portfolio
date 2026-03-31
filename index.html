@@ -799,16 +799,32 @@ html {
 }
 .cert-group {
   display: flex;
-  flex-direction: column;  /* one below another */
-  gap: 12px;               /* space between buttons */
-  margin-top: 15px;
+  flex-direction: column;
+  align-items: flex-start;   /* 👈 aligns nicely with text */
+  gap: 12px;
+  margin-top: 18px;
 }
 
 .cert-group .cert-btn {
-  padding: 12px 26px;      /* bigger buttons */
-  font-size: 0.9rem;
-  border-radius: 25px;
+  padding: 10px 22px;
+  font-size: 0.85rem;
+  border-radius: 22px;
+
+  width: auto;              /* ❌ remove full width */
+  min-width: 220px;         /* ✅ consistent size */
   text-align: center;
+
+  border: 2px solid rgb(163, 79, 243);
+  color: rgb(163, 79, 243);
+  background: transparent;
+
+  transition: all 0.3s ease;
+}
+
+.cert-group .cert-btn:hover {
+  background: rgb(163, 79, 243);
+  color: white;
+  box-shadow: 0 0 15px rgba(163, 79, 243, 0.5);
 }
 </style>
 </head>
