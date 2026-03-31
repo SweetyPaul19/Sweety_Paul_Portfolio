@@ -797,35 +797,6 @@ html {
     -webkit-background-clip: unset;
     -webkit-text-fill-color: unset;
 }
-.cert-group {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;   /* 👈 aligns nicely with text */
-  gap: 12px;
-  margin-top: 18px;
-}
-
-.cert-group .cert-btn {
-  padding: 10px 22px;
-  font-size: 0.85rem;
-  border-radius: 22px;
-
-  width: auto;              /* ❌ remove full width */
-  min-width: 220px;         /* ✅ consistent size */
-  text-align: center;
-
-  border: 2px solid rgb(163, 79, 243);
-  color: rgb(163, 79, 243);
-  background: transparent;
-
-  transition: all 0.3s ease;
-}
-
-.cert-group .cert-btn:hover {
-  background: rgb(163, 79, 243);
-  color: white;
-  box-shadow: 0 0 15px rgba(163, 79, 243, 0.5);
-}
 </style>
 </head>
 <body>
@@ -1135,7 +1106,7 @@ html {
     </div>
 
     <!-- Certification 6 (Hackathon) -->
-    <div class="cert-group">
+    <div class="training-card">
       <h3>Hackathon Participation & Achievement Certificate</h3>
       <div class="org">Hactopus And HackZenith Hackathon</div>
       <div class="year">2024</div>
@@ -1144,7 +1115,7 @@ html {
         teamwork, innovation, and technical skills.
       </p>
       <a href="https://drive.google.com/file/d/1LKn3Sa12VY3YBCy1FYpZbM4rUYjeif-I/view?usp=drivesdk" target="_blank" class="cert-btn">View Hactopus Certificate</a>
-      <a href="https://drive.google.com/file/d/1H5jbiocvDn-7w0t64WVl9_LAS84eBdrr/view?usp=drivesdk" target="_blank" class="ach-btn">View HackZenith Certificate</a>   
+      <a href="https://drive.google.com/file/d/1H5jbiocvDn-7w0t64WVl9_LAS84eBdrr/view?usp=drivesdk" target="_blank" class="cert-btn">View HackZenith Certificate</a>   
     </div>
   </div>
 </section>
