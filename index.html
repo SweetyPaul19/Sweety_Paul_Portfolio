@@ -797,6 +797,19 @@ html {
     -webkit-background-clip: unset;
     -webkit-text-fill-color: unset;
 }
+.cert-group {
+  display: flex;
+  flex-direction: column;  /* one below another */
+  gap: 12px;               /* space between buttons */
+  margin-top: 15px;
+}
+
+.cert-group .cert-btn {
+  padding: 12px 26px;      /* bigger buttons */
+  font-size: 0.9rem;
+  border-radius: 25px;
+  text-align: center;
+}
 </style>
 </head>
 <body>
@@ -1106,7 +1119,7 @@ html {
     </div>
 
     <!-- Certification 6 (Hackathon) -->
-    <div class="training-card">
+    <div class="cert-group">
       <h3>Hackathon Participation & Achievement Certificate</h3>
       <div class="org">Hactopus And HackZenith Hackathon</div>
       <div class="year">2024</div>
