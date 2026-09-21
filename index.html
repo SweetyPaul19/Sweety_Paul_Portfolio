@@ -5,824 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Sweety paul - Portfolio</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
-    <style>
-      
-    body{
-        background-color: rgb(0, 0, 33);
-        color: white;
-        font-family: 'Poppins',sans-serif;
-    }
-    nav{
-        display: flex;
-        justify-content: space-around;
-        align-items: center;
-        height: 80px;
-        background-color: rgb(18,18, 62);
-    }
-    nav ul{
-        display: flex;
-        justify-content: center;
-    }
-    nav ul li{
-        list-style: none;
-        margin: 0 23px;
-    }
-    nav ul li a{
-        text-decoration: none;
-        color: white;
-    }
-    nav ul li a:hover{
+    <link rel="stylesheet" href="Style.css">
     
-        color: rgb(153, 153, 244);
-        font-size: 1.05rem;
-    }
-    .left{
-        font-size: 1.5rem;
-
-    }
-    .firstSection{
-        display: flex;
-        justify-content: space-around;
-        margin: 130px 0;
-        align-items: center;
-
-    }
-    .firstSection > div{
-        width: 30%;
-
-    }
-    .leftSection{
-        
-        font-size: 3rem;
-    
-
-    }
-    .rightSection img{
-        width: 80%;
-    border-radius: 15px;
-    box-shadow: 0 0 25px rgba(163, 79, 243, 0.4);   
-    }
-    .leftSection div{ 
-        font-size: 3rem;
-    }
-    .purple{
-        color: rgb(163, 79, 243);
-
-    }
-    *{
-        margin: 0;
-        padding: 0;
-    }
-    #element{
-        color: rgb(157, 86, 250);
-    }
-    .secondsection{
-        max-width: 80%;
-        margin:auto;
-    }
-    main hr{
-        border: 0;
-        background-color: #9c97f1;
-        height: 1.2px;
-        margin: 60px 84px;
-    }
-    .aboutSection {
-    max-width: 80%;
-    margin: auto;
-    padding: 80px 0;
-}
-
-.aboutContainer {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    gap: 60px;
-}
-
-.aboutImage img {
-    width: 80%;
-    border-radius: 15px;
-    box-shadow: 0 0 25px rgba(163, 79, 243, 0.4);
-}
-
-.aboutContent h1 {
-    font-size: 3rem;
-    margin-bottom: 20px;
-    color: white;
-}
-
-.aboutText {
-    font-size: 1.1rem;
-    color: #ffffff;
-    line-height: 1.8;
-    margin-bottom: 30px;
-}
-
-.aboutDetails p {
-    font-size: 1rem;
-    margin-bottom: 12px;
-    color: #ffffff;
-}
-
-.aboutDetails span {
-    color: rgb(163, 79, 243);
-    font-weight: 600;
-}
-.aboutDetails a {
-    color: rgb(77, 77, 178);
-    text-decoration: none;
-}
-
-.aboutDetails a:hover {
-    text-decoration: underline;
-}
-.aboutDetails p {
-    font-size: 1rem;
-    margin-bottom: 18px;  /* 👈 space between each line */
-    line-height: 1.9;    /* 👈 vertical spacing */
-    color: #ffffff;
-}
-.skillsSection {
-    max-width: 85%;
-    margin: auto;
-    padding: 100px 0;
-    text-align: center;
-}
-
-.sectionTitle {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-
-.sectionSubtitle {
-    color: #bdbdbd;
-    font-size: 1.1rem;
-    margin-bottom: 60px;
-}
-
-.skillsGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
-    gap: 45px;
-}
-
-.skillBox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    transition: transform 0.3s ease;
-}
-
-.skillBox i {
-    font-size: 3.5rem;
-}
-
-.skillBox span {
-    font-size: 1rem;
-    color: #ffffff;
-}
-
-.skillBox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 12px;
-    text-align: center;
-    transition: 0.3s ease;
-}
-
-.skillBox:hover {
-    transform: translateY(-8px);
-    filter: drop-shadow(0 0 10px rgba(163,79,243,0.6));
-}
-.projectsSection {
-  max-width: 90%;
-  margin: auto;
-  padding: 120px 0;
-  text-align: center;
-}
-.projectsTitle {
-  font-size: 3rem;
-  margin-bottom: 10px;
-}
-.projectsSubtitle {
-  font-size: 1.1rem;
-  color: #bdbdbd;
-  margin-bottom: 70px;
-}
-.projectsGrid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 50px;
-}
-.projectCard {
-  background: #ffffff;
-  color: #000;
-  border-radius: 12px;
-  padding: 25px;
-  text-align: left;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-.projectCard img {
-  width: 100%;
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-
-.projectCard h3 {
-  font-size: 1.3rem;
-  margin-bottom: 10px;
-}
-
-.projectCard p {
-  font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 15px;
-  line-height: 1.6;
-}
-
-.tech {
-  display: block;
-  font-size: 0.85rem;
-  color: #666;
-  margin-bottom: 18px;
-}
-
-.projectBtn {
-  display: inline-block;
-  padding: 8px 18px;
-  border: 1.5px solid rgb(163, 79, 243);
-  border-radius: 20px;
-  color: rgb(163, 79, 243);
-  font-size: 0.85rem;
-  text-decoration: none;
-  transition: 0.3s;
-}
-
-.projectBtn:hover {
-  background: rgb(163, 79, 243);
-  color: #fff;
-}
-
-.projectCard:hover {
-  transform: translateY(-10px);
-  box-shadow: 0 20px 40px rgba(163, 79, 243, 0.25);
-}
-.projectLinks {
-  display: flex;
-  gap: 14px;
-  margin-top: 16px;
-}
-
-/* Common Button Style */
-.githubBtn,
-.liveBtn {
-  padding: 10px 18px;
-  border-radius: 25px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-decoration: none;
-  transition: all 0.3s ease;
-  display: inline-block;
-}
-
-/* GitHub Button */
-.githubBtn {
-  background: rgb(210, 173, 244);
-  color: #000;
-}
-
-.githubBtn:hover {
-  background: rgb(210, 173, 244);
-  transform: translateY(-2px);
-}
-
-/* Live Demo Button */
-.liveBtn {
-  border: 2px solid rgb(163, 79, 243);
-  color: rgb(163, 79, 243);
-}
-
-.liveBtn:hover {
-  background: rgb(163, 79, 243);
-  color: #fff;
-  transform: translateY(-2px);
-}
-.resumeSection {
-  min-height: 60vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  text-align: center;
-  background: rgb(0, 0, 33); /* SAME AS SITE */
-  padding: 120px 20px;
-}
-
-.resumeTitle {
-  font-size: 3rem;
-  margin-bottom: 15px;
-  color: #ffffff;
-}
-
-.resumeSubtitle {
-  font-size: 1.1rem;
-  color: #bdbdbd;
-  margin-bottom: 50px;
-  max-width: 600px;
-}
-
-.resumeButtons {
-  display: flex;
-  gap: 25px;
-  flex-wrap: wrap;
-  justify-content: center;
-}
-
-.resumeBtn {
-  padding: 16px 38px;
-  border-radius: 40px;
-  font-size: 0.95rem;
-  font-weight: 600;
-  text-decoration: none;
-  letter-spacing: 1px;
-  transition: all 0.3s ease;
-}
-
-/* VIEW CV */
-.viewBtn {
-  background: rgb(163, 79, 243); /* PURPLE */
-  color: #fff;
-}
-
-.viewBtn:hover {
-  background: rgb(143, 59, 223);
-  transform: translateY(-3px);
-  box-shadow: 0 0 25px rgba(163,79,243,0.6);
-}
-
-/* DOWNLOAD CV */
-.downloadBtn {
-  border: 2px solid rgb(163, 79, 243);
-  color: rgb(163, 79, 243);
-}
-
-.downloadBtn:hover {
-  background: rgb(163, 79, 243);
-  color: #fff;
-  transform: translateY(-3px);
-  box-shadow: 0 0 25px rgba(163,79,243,0.6);
-}
-.contact {
-  padding: 120px 10%;
-  background: rgb(0, 0, 33);   /* SAME AS BODY */
-  color: #ffffff;
-  text-align: center;
-}
-
-
-.contact h2 {
-  font-size: 3.2rem;
-  margin-bottom: 12px;
-}
-
-.contact-subtitle {
-  color: #cbd5f5;
-  margin-bottom: 70px;
-  font-size: 1.05rem;
-}
-
-.contact-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
-  gap: 35px;
-}
-
-.contact-card {
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(10px);
-  padding: 40px 25px;
-  border-radius: 18px;
-  transition: all 0.35s ease;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-}
-
-.contact-card:hover {
-  transform: translateY(-10px);
-  border-color: #a855f7;
-  box-shadow: 0 15px 40px rgba(168, 85, 247, 0.35);
-}
-
-.icon {
-  font-size: 36px;
-  margin-bottom: 20px;
-  display: inline-block;
-}
-
-.contact-card h3 {
-  margin-bottom: 10px;
-  font-size: 1.15rem;
-}
-
-.contact-card p {
-  color: #e5e7eb;
-  font-size: 0.95rem;
-  line-height: 1.5;
-}
-.navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 70px;
-  background: linear-gradient(90deg, #020617, #0f172a);
-  z-index: 1000;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  padding: 0 60px;   /* 🔥 controls left-right spacing */
-}
-.navbar .right ul {
-  display: flex;
-  gap: 5px;          /* space between menu items */
-  margin-right: 120px; /* 🔥 pulls menu left */
-}
-nav ul li a {
-  position: relative;
-  text-decoration: none;
-}
-
-nav ul li a::after {
-  content: "";
-  position: absolute;
-  left: 50%;
-  bottom: -6px;
-  width: 0;
-  height: 2px;
-  background-color: rgb(153, 153, 244);
-  transition: all 0.3s ease;
-}
-
-nav ul li a:hover::after {
-  width: 100%;
-  left: 0;
-}
-
-
-section {
-  padding-top: 100px;
-}
-html {
-  scroll-behavior: smooth;
-}
-.education-section {
-  padding: 80px 10%;
-  color: white;
-}
-
-.section-title {
-  text-align: center;
-  font-size: 2.5rem;
-  margin-bottom: 50px;
-}
-
-.education-card {
-  background: rgba(255, 255, 255, 0.05);
-  border-left: 4px solid #818cf8;
-  padding: 25px 30px;
-  margin-bottom: 30px;
-  border-radius: 12px;
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.education-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 10px 30px rgba(129, 140, 248, 0.3);
-}
-
-.education-card h2 {
-  font-size: 1.5rem;
-  color: #a5b4fc;
-}
-
-.education-card h3 {
-  font-size: 1.1rem;
-  margin: 6px 0;
-  color: #e5e7eb;
-}
-
-.education-card .year {
-  font-size: 0.9rem;
-  color: #9ca3af;
-  margin-bottom: 10px;
-}
-
-.education-card .desc {
-  font-size: 1rem;
-  color: #d1d5db;
-}
-
-/* ===== Training Section (Modern Glass UI Style) ===== */
-
-.training-section {
-  padding: 100px 10%;
-  color: white;
-  background: radial-gradient(circle at top, #020617, #000021);
-}
-
-.training-title {
-  text-align: center;
-  font-size: 3rem;
-  margin-bottom: 70px;
-  background: linear-gradient(90deg, #a855f7, #6366f1);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.training-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
-  gap: 35px;
-}
-
-.training-card {
-  position: relative;
-  background: rgba(255, 255, 255, 0.06);
-  backdrop-filter: blur(14px);
-  -webkit-backdrop-filter: blur(14px);
-  border-radius: 18px;
-  padding: 30px 30px;
-  border: 1px solid rgba(255, 255, 255, 0.12);
-  box-shadow: 
-    0 0 0 rgba(0,0,0,0),
-    inset 0 0 20px rgba(255,255,255,0.02);
-  transition: all 0.4s ease;
-  overflow: hidden;
-}
-
-/* Glow border effect */
-.training-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 18px;
-  padding: 1.5px;
-  background: linear-gradient(135deg, #a855f7, #6366f1, #22d3ee);
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0.5;
-}
-
-.training-card:hover {
-  transform: translateY(-10px) scale(1.01);
-  box-shadow: 0 25px 60px rgba(168, 85, 247, 0.35);
-}
-
-/* Content */
-.training-card h3 {
-  font-size: 1.35rem;
-  margin-bottom: 10px;
-  color: #e9d5ff;
-}
-
-.training-card .org {
-  font-size: 1rem;
-  color: #c7d2fe;
-  margin-bottom: 6px;
-}
-
-.training-card .year {
-  font-size: 0.85rem;
-  color: #94a3b8;
-  margin-bottom: 14px;
-  letter-spacing: 0.5px;
-}
-
-.training-card p {
-  font-size: 0.95rem;
-  color: #e5e7eb;
-  line-height: 1.7;
-}
-
-/* Floating glow icon circle */
-.training-card::after {
-  content: "🎓";
-  position: absolute;
-  top: -18px;
-  right: -18px;
-  background: linear-gradient(135deg, #a855f7, #6366f1);
-  width: 50px;
-  height: 50px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 22px;
-  box-shadow: 0 0 25px rgba(168, 85, 247, 0.6);
-}
-.cert-btn {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 9px 22px;
-  border-radius: 22px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-decoration: none;
-  color: rgb(163, 79, 243);
-  border: 2px solid rgb(163, 79, 243);
-  transition: all 0.3s ease;
-}
-
-.cert-btn:hover {
-  background: rgb(163, 79, 243);
-  color: white;
-  box-shadow: 0 0 20px rgba(163, 79, 243, 0.6);
-  transform: translateY(-2px);
-}
-
-
-.achievements-section {
-  padding: 80px 10%;
-  color: white;
-}
-
-.achievements-title {
-  text-align: center;
-  font-size: 2.8rem;
-  margin-bottom: 50px;
-}
-
-.achievements-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-.achievement-card {
-  background: rgba(255, 255, 255, 0.06);
-  border-left: 4px solid rgb(163, 79, 243);
-  padding: 25px 28px;
-  border-radius: 14px;
-  transition: all 0.3s ease;
-}
-
-.achievement-card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 12px 35px rgba(163, 79, 243, 0.35);
-}
-
-.achievement-card h3 {
-  font-size: 1.25rem;
-  color: #c4b5fd;
-  margin-bottom: 8px;
-}
-
-.achievement-card .year {
-  font-size: 0.9rem;
-  color: #9ca3af;
-  margin-bottom: 10px;
-}
-
-.achievement-card p {
-  font-size: 0.95rem;
-  color: #d1d5db;
-  line-height: 1.6;
-}
-.training-card::before {
-  content: "";
-  position: absolute;
-  inset: 0;
-  border-radius: 18px;
-  padding: 1.5px;
-  background: linear-gradient(135deg, #a855f7, #6366f1, #22d3ee);
-  -webkit-mask:
-    linear-gradient(#fff 0 0) content-box,
-    linear-gradient(#fff 0 0);
-  -webkit-mask-composite: xor;
-  mask-composite: exclude;
-  opacity: 0.5;
-
-  pointer-events: none; /* ✅ THIS FIXES BUTTON CLICK ISSUE */
-}
-.cert-btn {
-  position: relative;
-  z-index: 10;
-}
-.achievements-section {
-  padding: 80px 10%;
-  color: white;
-}
-
-.achievements-title {
-  text-align: center;
-  font-size: 2.8rem;
-  margin-bottom: 50px;
-  background: linear-gradient(90deg, #a34ff3, #22c55e);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-}
-
-.achievements-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
-}
-
-.achievement-card {
-  background: rgba(255, 255, 255, 0.07);
-  border: 1px solid rgba(163, 79, 243, 0.4);
-  padding: 25px 28px;
-  border-radius: 16px;
-  transition: all 0.3s ease;
-  position: relative;
-  overflow: hidden;
-}
-
-.achievement-card:hover {
-  transform: translateY(-8px);
-  box-shadow: 0 15px 40px rgba(163, 79, 243, 0.4);
-}
-
-.achievement-card h3 {
-  font-size: 1.25rem;
-  color: #ddd6fe;
-  margin-bottom: 8px;
-}
-
-.achievement-card .year {
-  font-size: 0.9rem;
-  color: #9ca3af;
-  margin-bottom: 10px;
-}
-
-.achievement-card p {
-  font-size: 0.95rem;
-  color: #d1d5db;
-  line-height: 1.6;
-  margin-bottom: 15px;
-}
-
-/* Button Style */
-.ach-btn {
-  display: inline-block;
-  padding: 8px 20px;
-  border-radius: 20px;
-  font-size: 0.85rem;
-  font-weight: 600;
-  text-decoration: none;
-  color: rgb(163, 79, 243);
-  border: 2px solid rgb(163, 79, 243);
-  transition: 0.3s ease;
-}
-
-.ach-btn:hover {
-  background: rgb(163, 79, 243);
-  color: white;
-}
-.training-title,
-.achievements-title {
-    color: white;
-    background: none; /* remove gradient */
-    -webkit-background-clip: unset;
-    -webkit-text-fill-color: unset;
-}
-.projectCard img {
-  width: 100%;
-  height: 200px;    /* Set a fixed height */
-  object-fit: cover; /* This prevents the image from stretching */
-  border-radius: 8px;
-  margin-bottom: 20px;
-}
-.projectsGrid {
-  display: grid;
-  /* Force exactly 3 columns on desktop */
-  grid-template-columns: repeat(3, 1fr); 
-  gap: 50px;
-}
-
-/* This targets the 4th project card specifically */
-.projectCard:nth-child(4) {
-  /* This tells the 4th card to start at the 2nd column 
-     effectively centering it under the middle card above */
-  grid-column: 2; 
-}
-
-/* Mobile Responsiveness: Stack them back to 1 column on small screens */
-@media (max-width: 900px) {
-  .projectsGrid {
-    grid-template-columns: 1fr;
-  }
-  .projectCard:nth-child(4) {
-    grid-column: auto;
-  }
-}
-</style>
 </head>
 <body>
 <header>
@@ -878,7 +62,7 @@ html {
       </p>
       <div class="aboutDetails">
         <p><span>Name:</span> Sweety Paul</p>
-        <p><span>Email:</span> sweetypaul2005@email.com</p>
+        <p><span>Email:</span> sweetypaul2005@gmail.com</p>
         <p><span>Skills:</span> HTML5, CSS, JavaScript, C, Java, Python, React js,Node js,Mysql,Mongodb,Bootstrap,Git & Github</p>
         <p><span>Linktree:</span>
   <a href="https://linktr.ee/sweety_paul" target="_blank">
@@ -970,11 +154,6 @@ html {
   </div>
 
   <div class="skillBox">
-    <i class="devicon-cplusplus-plain colored"></i>
-    <span>C++</span>
-  </div>
-
-  <div class="skillBox">
     <i class="devicon-python-plain colored"></i>
     <span>Python</span>
   </div>
@@ -982,11 +161,6 @@ html {
   <div class="skillBox">
     <i class="devicon-java-plain colored"></i>
     <span>Java</span>
-  </div>
-
-  <div class="skillBox">
-    <i class="devicon-php-plain colored"></i>
-    <span>PHP</span>
   </div>
 
   <!-- Frontend -->
@@ -1031,11 +205,6 @@ html {
     <span>Django</span>
   </div>
 
-  <div class="skillBox">
-    <i class="devicon-java-plain colored"></i>
-    <span>Servlet</span>
-  </div>
-
   <!-- Databases -->
   <div class="skillBox">
     <i class="devicon-mysql-plain colored"></i>
@@ -1059,6 +228,64 @@ html {
     <i class="devicon-vscode-plain colored"></i>
     <span>VS Code</span>
   </div>
+  <!-- Data Science & Machine Learning -->
+<div class="skillBox">
+  <i class="devicon-numpy-plain colored"></i>
+  <span>NumPy</span>
+</div>
+
+<div class="skillBox">
+  <i class="devicon-pandas-plain colored"></i>
+  <span>Pandas</span>
+</div>
+
+<div class="skillBox">
+  <i class="devicon-matplotlib-plain colored"></i>
+  <span>Matplotlib</span>
+</div>
+
+<div class="skillBox">
+  <i class="devicon-jupyter-plain colored"></i>
+  <span>Jupyter Notebook</span>
+</div>
+
+<!-- Machine Learning Algorithms -->
+<div class="skillBox">
+  <span class="skillIcon">🌲</span>
+  <span>Random Forest</span>
+</div>
+
+<div class="skillBox">
+  <span class="skillIcon">🌳</span>
+  <span>Decision Tree</span>
+</div>
+
+<div class="skillBox">
+  <span class="skillIcon">📊</span>
+  <span>Logistic Regression</span>
+</div>
+
+<div class="skillBox">
+  <span class="skillIcon">📈</span>
+  <span>Linear Regression</span>
+</div>
+
+<div class="skillBox">
+  <span class="skillIcon">🤖</span>
+  <span>Classification</span>
+</div>
+
+<!-- Full Stack -->
+
+  <div class="skillBox">
+  <div class="mernIcons">
+    <i class="devicon-mongodb-plain colored"></i>
+    <i class="devicon-express-original"></i>
+    <i class="devicon-react-original colored"></i>
+    <i class="devicon-nodejs-plain colored"></i>
+  </div>
+  <span>MERN Stack</span>
+</div>
 </div>
 </section>
 <hr>
@@ -1324,11 +551,6 @@ html {
 </section>
   </main>
   <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
-  <script>
-    var typed = new Typed('#element', {
-      strings: ['Full-Stack developer', 'web designer','ML Engineer...'],
-      typeSpeed: 50,
-    });
-  </script>
+  <script src="app.js"></script>
 </body>
 </html>
